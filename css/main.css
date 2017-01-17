@@ -16,6 +16,12 @@ html {
   transition: all 200ms ease-out;
 }
 
+.polaroid:hover {
+  transform: rotate(0deg);
+  z-index: 4;
+  box-shadow: 8px 9px 11px rgba(0, 0, 0, .5);
+}
+
 body {
   position: relative;
 }
@@ -28,6 +34,9 @@ body {
 .polaroid > figcaption {
   color: #fff;
   text-shadow: 1px 1px 3px #000;
+  position: absolute;
+  top: 130px;
+  left: 80px;
 }
 
 .figcaption {
@@ -39,16 +48,19 @@ figure:first-child {
   left: 20%;
   top: 100px;
   z-index: 2;
+  transform: rotate(-14deg);
 }
 
 figure:nth-child(2) {
   left: 30%;
-  top: 150px
+  top: 150px;
   z-index: 3;
+  transform: rotate(5deg);
 }
 
 figure:last-child {
-  left: 40%
-  top: 100px
+  left: 40%;
+  top: 100px;
   z-index: 1;
+  transform: rotate(35deg);
 }
